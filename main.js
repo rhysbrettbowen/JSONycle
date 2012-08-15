@@ -28,12 +28,12 @@ JSONycle.parse = function(s, c) {
       var key = obj;
       var val = obj;
       for (var n = 0; (n+1) < c[i][0].length; n++) {
-        key = key[c[i][n]];
+        key = key[c[i][0][n]];
       }
       for (var m = 0; m < c[i][1]; m++) {
         val = val[c[i][m]];
       }
-      key[n] = val;
+      key[c[i][0][n]] = val;
     }
     return obj;
   } catch (ex) {
